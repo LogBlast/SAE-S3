@@ -1,0 +1,4 @@
+<?php
+	$v->afficher();
+
+?>

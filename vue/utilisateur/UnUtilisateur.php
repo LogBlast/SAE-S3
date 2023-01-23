@@ -1,0 +1,4 @@
+<?php
+	$u->afficher();
+
+?>

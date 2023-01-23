@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Page de connexion</title>
+    <link rel="stylesheet" href="../css/styleFormulaire.css">
+	<link rel="stylesheet" href="../css/styleImageConnexion.css">
+  <link href="https://fonts.cdnfonts.com/css/comodo" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+	<a href="../vue/accueil.html"><img src="../vue/images/Icones/logo.png" class="logo" alt="logo du site"></a>
+  <form action="index.php" method="get">
+  
+	<header class="head-form">
+      <h2>Connexion</h2>
+      <p>Connecter vous ici en utilisant votre login et votre mot de passe </p>
+  
+  </header>
+  
+    <input type="hidden" name="controleur" value="controleurUtilisateur">
+    <input type="hidden" name="action" value="connecterUtilisateur">
+    <div>
+      <label for="login">login</label>
+      <input type="text" id="login" placeholder="login">
+    </div>
+    <div>
+      <label for="mdp">mot de passe</label>
+      <input type="password" id="mdp" placeholder="mot de passe">
+    </div>
+	
+	
+	  <button type="button">Mot de passe oublié</button>
+    <button type="submit">je me connecte</button>
+  </form>
+</main>
+  </body>
+</html>

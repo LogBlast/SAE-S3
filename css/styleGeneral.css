@@ -1,0 +1,110 @@
+﻿html,body{
+	height: 100%;
+}
+
+
+body{
+	 
+	 	background: radial-gradient(ellipse at 55% 52%,#f7fffd, rgba(252,255,216,1));
+	  padding:75px;
+	  text-align:center;
+	  font-family: 'Oswald', sans-serif;
+	  font-size: 18px;
+	}
+
+
+
+
+
+
+.contenu{
+	border-style: groove;
+   	 min-height: 100%;
+   	 /*permet de changer l'écart entre le footer et le bas de page  */
+ 	 margin-bottom: 50px; 
+}
+
+
+
+
+
+
+
+/*  partie qui peut être individuel à la page accueil (non général)*/
+
+
+
+
+.contenu{
+	
+	position: relative;
+	
+}
+
+.transparent {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image: url("../vue/images/Fond/mediatheque_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.bloc1{
+	position: relative;
+	z-index: 2;
+	border-style: groove;
+	background-color: black;
+	color: white;
+	 
+	height: 70px;
+	width: 300px;
+	text-decoration: underline;
+	
+	margin-left: 25px
+   	
+}
+
+.recherche{
+	/*  pour faire z-index, il faut mettre position en relative, fixed ...     */
+		position: relative;
+        width: 30%;
+        margin-top: 250px;
+		
+		/* permet de le mettre au premier plan   */
+		z-index: 2;
+		
+		bottom: 55%;
+		left: 68%;
+      }
+      
+	  
+	  input {
+        padding: 4px 10px;
+        border: 0;
+        font-size: 16px;
+      }
+      .search {
+        width: 75%;
+      }
+      .submit {
+        width: 100px;
+        background-color: #1c87c9;
+        color: #ffffff;
+      }
+
+#corps img{
+	
+	width: 220px;
+	height: 300px;
+	position: relative;
+	z-index: 2;
+	bottom: 20%;
+	left: 4%;
+	margin-right: 9%;
+	
+}
+
