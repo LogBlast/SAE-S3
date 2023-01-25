@@ -2,7 +2,7 @@
 	
 	class Bibliothecaire extends Modele {
 		
-	protected static $objet = "bibli";
+	protected static $objet = "bibliothecaire";
 	protected static $cle = "numBibli";
 	
 	protected $numBibli;
@@ -16,3 +16,5 @@
 		//Description d'un(e) bibliothécaire avec ses caractéristiques
 		echo "<p> Bibliothecaire n° $this->numBibli, son nom est $this->nomBibli, son prénom est $this->prenomBibli, son numéro de téléphone est $this->telBibli et son email est $this->emailBibli. </p>";
 	}
+	}
+	?>

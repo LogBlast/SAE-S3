@@ -16,3 +16,5 @@
 		//Description d'un administrateur(rice) avec ses caractéristiques
 		echo "<p> Administrateur(rice) n° $this->numAdmin, son nom est $this->nomAdmin, ses droits sont $this->droitAdmin, son téléphone est $this->telAdmin et son email est $this-> emailAdmin. </p>";
 	}
+	}
+	?>

@@ -35,6 +35,27 @@ class ControleurEmprunteur {
       include("vue/unObjet.php");
     include("vue/fin.html");
   }
+		 public static function GererEmprunteur() {
+    $objet = static::$objet;
+    $classe = ucfirst($objet);
+    $identifiant = static::$cle;
+    $tab_obj = $classe::getAll();
+    // construction du tableau de liens pour l'affichage
+    $tabAff = array();
+    foreach($tab_obj as $obj) {
+      $id = $obj->get($identifiant);
+      $n = $obj->get("nomEmprunteur");
+      $p = $obj->get("prenomEmprunteur");
 
+
+    $tabAff[] = "<div class='ligne'><div> $id, $n, $p";//rajouter des balises div pour la mise en forme
+    }
+	include("vue/debut.php");
+    include("vue/menu.html");
+	include("vue/corps.html");
+    include("vue/vueGererEmprunteur.php");  //ca va surement change de nom
+    include("vue/footer.html");
+  
+  }
 }
 ?>

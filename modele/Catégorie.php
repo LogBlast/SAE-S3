@@ -13,3 +13,5 @@
 		//Description d'un(e) catégorie avec ses caractéristiques
 		echo "<p> Catégorie n° $this->numCatégorie, son nom est $this->nomCatégorie. </p>";
 	}
+	}
+	?>

@@ -13,3 +13,5 @@
 		//Description d'un type d'ouvrages avec ses caractéristiques
 		echo "<p> > Type d'ouvrages n° $this->numTypeOuvrage, son nom est $this->nomTypeOuvrage. </p>";
 	}
+	}
+	?>

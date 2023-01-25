@@ -15,3 +15,5 @@
 		//Description d'un(e) dessinateur(rice) avec ses caractéristiques
 		echo "<p> Dessinateur(rice) n° $this->numDessinateur, son nom est $this->nomDessinateur, son prénom est $this->prenomDessinateur et sa date de naissance est le $this->emailBibli. </p>";
 	}
+	}
+	?>

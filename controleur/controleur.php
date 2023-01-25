@@ -19,27 +19,28 @@ require_once("modele/TypeOuvrage.php");
 //définition du contrôleur générique
 class Controleur {
 	 
-	// la méthode de récupération et d'affichage de tous les objets
 	public static function lireObjets() {
-		
-		$titre = $objet;
-		
-		
-		$tab = $cle::getAll();
-		
-		
-		// construction du tableau de liens pour l'affichage
-		$tabAff = array();
-		foreach($tab as $u) {
-			
-		  $log = $u->get("login");
-		  
-		  
-		  $lienDetails = "<a class='bouton' href=\"routeur.php?controleur=controleurUtilisateur&action=lireUtilisateur&login=$log\"> détails </a>";
-		  $tabAff[] = "<div class='ligne'><div>utilisateur $log</div><div> $lienDetails</div></div>";
-		}
-		include("vues/accueil.php");
-	 }
+    $objet = static::$objet;
+    $classe = ucfirst($objet);
+    $titre = "les {$objet}s";
+    $identifiant = static::$cle;
+	//$lienImage=static::$image;
+    $tab_obj = $classe::getAll();
 	
+	
+	
+	
+    // construction du tableau de liens pour l'affichage
+    $tabAff = array();
+    foreach($tab_obj as $obj) {
+      $id = $obj->get($identifiant);
+	$tabAff[] = "<div class='ligne'><div>$objet $id";    
+    }
+	include("vue/debut.php");
+    include("vue/menu.html");
+    include("vue/lesObjets.php");
+    include("vue/fin.html");
+  }
+
 }
 ?>

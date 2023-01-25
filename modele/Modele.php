@@ -34,7 +34,7 @@ class Modele {
 	}
 	
 	// méthode static générique qui retourne l'objet (voiture ou utilisateur) d'identifiant $id
-	public static function getBy($id) {
+	public static function getByNum($id) {    //num etant le $id
 		//récupération de la variable static $objet de la classe fille
 		$table = static::$objet; //récupère "utilisateur" ou "voiture" selon les cas
 		//récupération de la variable static $objet de la classe fille

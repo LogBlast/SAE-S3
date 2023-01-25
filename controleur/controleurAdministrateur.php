@@ -11,7 +11,7 @@ require_once("modele/Administrateur.php");
 
 
 // définition du contrôleur Administrateur
-class ControleurAdministrateur {
+class ControleurAdministrateur extends Controleur{
 	
 	protected static $objet = "les administrateurs";
 	protected static $cle = "Administrateur";
@@ -22,7 +22,7 @@ class ControleurAdministrateur {
   public static function lireUtilisateur() {
     $titre = "un utilisateur";
     $l = $_GET["login"];
-    $obj = Utilisateur::getObjetById($l);;
+    $obj = Utilisateur::getObjetById($l);
     include("vue/debut.php");
     include("vue/menu.html");
     if (!$obj){
@@ -34,6 +34,14 @@ class ControleurAdministrateur {
 	else
       include("vue/unObjet.php");
     include("vue/fin.html");
+  }
+  
+    public static function AdministrateurInfosOuvrages() {
+    
+	$tabAff= ControleurOuvrage::lireInfosOuvrages();
+	
+	
+	
   }
 
 }

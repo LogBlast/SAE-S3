@@ -14,3 +14,5 @@
 		//Description d'un(e) éditeur/éditrice avec ses caractéristiques
 		echo "<p> Editeur/Editrice n° $this->numEditeur, son nom est $this->nomEditeur, son adresse est $this->adresseEditeur. </p>";
 	}
+	}
+	?>

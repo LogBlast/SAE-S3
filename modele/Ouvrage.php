@@ -2,8 +2,8 @@
 	
 	class Ouvrage extends Modele {
 		
-	protected static $objet = "ouvrage";
-	protected static $cle = "numero";
+	protected static $objet = "Ouvrage";
+	protected static $cle = "numOuvrage";
 	
 	protected $numero;
 	protected $titre;
@@ -13,7 +13,7 @@
 	protected $numCodeBarre;
 	protected $ibsn;
 	protected $exemplaireRestant;
-	
+	protected $lienImageOuvrage;
 
 	
 	//Fonction qui permet d'afficher les caractéristiques d'un livre

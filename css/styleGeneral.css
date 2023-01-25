@@ -108,3 +108,24 @@ body{
 	
 }
 
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+
+.col {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+.titreO {
+
+width: 75%;
+position: relative;
+bottom: 20%;
+left : 12%;
+
+}

@@ -16,3 +16,5 @@
 		//Description d'un exemplaire avec ses caractéristiques
 		echo "<p> L'exemplaire n° $this->numExemplaire est $this->empruntableExemplaire. Il a un état $this->etatExemplaire. Son numéro d'ouvrage est $this->numOuvrage et son numéro de langue est $this->numLangue. </p>";
 	}
+	}
+	?>

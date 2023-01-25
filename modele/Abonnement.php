@@ -16,3 +16,5 @@
 		//Description d'un abonnement avec ses caractéristiques
 		echo "<p> Abonnement n° $this->numeroAbonnement, son nom est $this->nomAbonnement, son prix est $this->prixAbonnement, sa limite de livres empruntables est $this->limiteEmpruntAbonnement et sa durée d'emprunt est $this-> dureeEmpruntAbonnement. </p>";
 	}
+	}
+	?>

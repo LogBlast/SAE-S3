@@ -18,3 +18,5 @@
 		//Description d'un(e) emprunteur(se) avec ses caractéristiques
 		echo "<p> Emprunteur/se n° $this->numEmprunteur, son nom est $this->nomEmprunteur, son prénom est $this->prenomEmprunteur, son numéro de téléphone est $this->telEmprunteur. Son email est $this->emailEmprunteur, il a $this->ageEmprunteur ans et il possède un abonnement $this->numAbonnement. </p>";
 	}
+	}
+	?>

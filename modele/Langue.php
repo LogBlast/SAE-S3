@@ -13,3 +13,5 @@
 		//Description d'une langue avec ses caractéristiques
 		echo "<p> Langue n° $this->numLangue, son nom est $this->nomLangue. </p>";
 	}
+	}
+	?>

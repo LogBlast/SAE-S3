@@ -11,7 +11,7 @@ require_once("modele/Bibliothecaire.php");
 
 
 // définition du contrôleur Bibliothecaire
-class ControleurBibliothecaire {
+class ControleurBibliothecaire extends Controleur{
 	
 	protected static $objet = "les bibliothecaires";
 	protected static $cle = "Bibliothecaire";
@@ -34,6 +34,11 @@ class ControleurBibliothecaire {
 	else
       include("vue/unObjet.php");
     include("vue/fin.html");
+  }
+    public static function BiblioLesTitres() {
+    
+	$tabAff= ControleurOuvrage::LireLesTitres();
+	
   }
 
 }

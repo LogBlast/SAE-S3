@@ -32,3 +32,12 @@ header{
 	width: 21%;
 	height: auto;
 }
+
+.statut{
+	position: absolute;
+    left: 67%;
+    top: 1%;	
+    border-block: blue;
+    border-style: groove;
+    width: 22%;
+}
