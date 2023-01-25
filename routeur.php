@@ -9,19 +9,17 @@ require_once("controleur/controleur.php");
 require_once("controleur/controleurOuvrage.php");
 require_once("controleur/controleurBibliothecaire.php");
 require_once("controleur/controleurAdministrateur.php");
-require_once("controleur/controleurEmprunteur.php");
 
-    $controleur = "controleurEmprunteur";
-	$action = "GererEmprunteur";
-	$tableauControleurs = ["controleurEmprunteur","controleurBibliothecaire","controleurAdministrateur","controleurTousLesOuvrages","controleurTousLesTypes","controleurToutesLesCategories","controleurBibliothecaire","controleurAdministrateur"];
+    $controleur = "controleurOuvrage";
+	$action = "lireAccueil";
+	$tableauControleurs = ["controleurBibliothecaire","controleurAdministrateur","controleurTousLesOuvrages","controleurTousLesTypes","controleurToutesLesCategories","controleurBibliothecaire","controleurAdministrateur"];
 	$actionParDefaut = array(
-		"controleurOuvrage" => "lireObjets",
-		"controleurTousLesOuvrages" => "lireLesOuvrage",
+		"controleurOuvrage" => "lireAccueil",
+		"controleurTousLesOuvrages" => "lireLesOuvrages",
 		"controleurTousLesTypes" => "liresObjets",
 		"controleurToutesLesCategories" => "liresObjets",
 		"controleurBibliothecaire" => "BiblioLesTitres",
 		"controleurAdministrateur" => "AdministrateurInfosOuvrages"
-		"controleurEmprunteur" => "GererEmprunteur"
 	);
 	
   if (isset($_GET["controleur"]) && in_array($_GET["controleur"],$tableauControleurs)) {

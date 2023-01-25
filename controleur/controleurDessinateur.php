@@ -13,8 +13,8 @@ require_once("modele/Dessinateur.php");
 // définition du contrôleur Dessinateur
 class ControleurDessinateur {
 	
-	protected static $objet = "les desssinateurs";
-	protected static $cle = "Dessinateur";
+	protected static $objet = "dessinateur";
+	protected static $cle = "numDessinateur";
 
   // la méthode de récupération de l'utilisateur
   // dont le login est passé en GET
@@ -35,6 +35,22 @@ class ControleurDessinateur {
       include("vue/unObjet.php");
     include("vue/fin.html");
   }
+    	 public static function allInfosDessinateur() {
+    $objet = static::$objet;
+    $classe = ucfirst($objet);
+    $titre = "les {$objet}s";
+    $identifiant = static::$cle;
+    $tab_obj = $classe::getAll();
+    // construction du tableau de liens pour l'affichage
+    $tabAff = array();
+    foreach($tab_obj as $obj) {
+      $n = $obj->get("nomDessinateur");
+      $p = $obj->get("prenomDessinateur");
+	  $d = $obj->get("dateNaissanceDessinateur");
 
+    $tabAff[] = "<div class='ligne'><div> le dessinateur $n $p est né le $d";//rajouter des balises div pour la mise en forme
+    }
+    
+}
 }
 ?>

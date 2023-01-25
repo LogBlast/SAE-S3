@@ -33,9 +33,10 @@ class ControleurOuvrage extends Controleur{
   }
 
 
-	public static function lireLesOuvrages() {
+	public static function lireAccueil() {
 	$i=0;
 	$x=0;
+	$a=0;
     $objet = static::$objet;
     $classe = ucfirst($objet);
     $titre = "les {$objet}s";
@@ -45,6 +46,7 @@ class ControleurOuvrage extends Controleur{
     $tab_obj = $classe::getAll();
     // construction du tableau de liens pour l'affichage
     $tabAff = array();
+    $tabAcc = array();
     foreach($tab_obj as $obj) {
       
 	  
@@ -53,7 +55,13 @@ class ControleurOuvrage extends Controleur{
 	  $id = $obj->get($identifiant);
 	  $im = $obj->get("lienImageOuvrage");
 	  }
-
+        
+      if($a==$i){
+          $id = $obj->get($identifiant);
+          $im = $obj->get("lienImageOuvrage");
+          
+          
+      }
 	  
 	  if (($x+1)==$i){
 	  
@@ -70,15 +78,21 @@ class ControleurOuvrage extends Controleur{
 		$id3 = $obj->get($identifiant);
 	    $im3 = $obj->get("lienImageOuvrage");
 		$tabAff[] = "<div class='ligne'><div> $id <img src=$im> $id2 <img src=$im2> $id3 <img src=$im3> ";//rajouter des balises div pour la mise en forme    
+		if($a<2){
+		    $tabAcc[]="<div class:'ligne'><div> $id <img src=$im> $id <img src=$im2> $id3 <img src=$im3>";
+		}
 		$x=$i;
 		$i=$i-1;
+		$a=$a+1;
 	  }
 	  $i=$i+1;
     }
 	include("vue/debut.php");
     include("vue/menu.html");
 	include("vue/corps.php");
-    include("vue/listeOuvrage.php");  //ca va surement change de nom
+	
+    include("vue/vueAcueille.php");  //ca va surement change de nom
+    
     include("vue/footer.html");
   }
 
@@ -105,7 +119,7 @@ class ControleurOuvrage extends Controleur{
     }
 	include("vue/debut.php");
     include("vue/menu.html");
-	include("vue/corps.php");
+	include("vue/corps.html");
     include("vue/vueadmin.php");  //ca va surement change de nom
     include("vue/footer.html");
   
@@ -149,10 +163,88 @@ class ControleurOuvrage extends Controleur{
 
 	include("vue/debut.php");
     include("vue/menu.html");
-	include("vue/corps.php");
+	include("vue/corps.html");
     include("vue/vueBiblio.php");  //ca va surement change de nom
     include("vue/footer.html");
   }
+    
+    
+    public static function lireLesOuvrages() {
+        $i=0;
+        $x=0;
+        $a=0;
+        $objet= static::$objet;
+        $classe = ucfirst($objet);
+        $titre = "les {$objet}s";
+        $identifiant = static::$cle;
+        //static  = "lienImageOuvrage";
+        //=static::;
+        $tab_obj = $classe::getAll();
+        // construction du tableau de liens pour l'affichage
+        $tabAff = array();
+        $tabAcc = array();
+        foreach($tab_obj as $obj) {
+          
+          
+          
+          if($x==$i){
+          $id = $obj->get($identifiant);
+          $im = $obj->get("lienImageOuvrage");
+          }
+    
+              
+          
+          
+          if (($x+1)==$i){
+          
+            $id2 = $obj->get($identifiant);
+            $im2 = $obj->get("lienImageOuvrage");
+          }
+          
+          
+          // = ->get();
+          // = ->get("lienImageOuvrage");
+    
+            
+          if(($x+2)==$i){
+            $id3 = $obj->get($identifiant);
+            $im3 = $obj->get("lienImageOuvrage");
+            $tabAff[] = "<div class='ligne'><div>  <img src=>  <img src=>  <img src=> ";//rajouter des balises div pour la mise en forme    
+            if($a<2){
+                $tabAcc[]="<div class:'ligne'><div>  <img src=>  <img src=>  <img src=>";
+            }
+            $x=$i;
+            $i=$i-1;
+            $a=$a+1;
+          }
+          $i=$i+1;
+        }
+        include("vue/debut.php");
+        include("vue/menu.html");
+        include("vue/corps.php");
+        
+        include("vue/listeOuvrage.php");  //ca va surement change de nom
+        
+        include("vue/footer.html");
+      }
+    	 public static function lireDetailsOuvrages() {
+    $objet = static::$objet;
+    $classe = ucfirst($objet);
+    $titre = "les {$objet}s";
+    $identifiant = static::$cle;
+    $tab_obj = $classe::getAll();
+    // construction du tableau de liens pour l'affichage
+    $tabAff = array();
+    foreach($tab_obj as $obj) {
+      $t = $obj->get("titreOuvrage");
+      $d = $obj->get("dateParutionOuvrage");
+	  $r = $obj->get("resume");
+	  $im = $obj->get("lienImageOuvrage");
 
+
+    $tabAff[] = "<div class='ligne'><div> $t, paru le $d, le résumé est $r, $im";//rajouter des balises div pour la mise en forme
+    }
+    
+}
 }
 ?>

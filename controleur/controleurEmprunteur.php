@@ -13,8 +13,8 @@ require_once("modele/Emprunteur.php");
 // définition du contrôleur Emprunteur
 class ControleurEmprunteur {
 	
-	protected static $objet = "les emprunteurs";
-	protected static $cle = "Emprunteur";
+	protected static $objet = "Emprunteur";
+	protected static $cle = "numEmprunteur";
 
   // la méthode de récupération de l'utilisateur
   // dont le login est passé en GET
@@ -35,7 +35,7 @@ class ControleurEmprunteur {
       include("vue/unObjet.php");
     include("vue/fin.html");
   }
-		 public static function GererEmprunteur() {
+	public static function GererEmprunteur() {
     $objet = static::$objet;
     $classe = ucfirst($objet);
     $identifiant = static::$cle;
@@ -52,7 +52,7 @@ class ControleurEmprunteur {
     }
 	include("vue/debut.php");
     include("vue/menu.html");
-	include("vue/corps.html");
+	include("vue/corps.php");
     include("vue/vueGererEmprunteur.php");  //ca va surement change de nom
     include("vue/footer.html");
   

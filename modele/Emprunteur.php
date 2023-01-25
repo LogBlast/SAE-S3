@@ -2,7 +2,7 @@
 	
 	class Emprunteur extends Modele {
 		
-	protected static $objet = "emprunteur";
+	protected static $objet = "Emprunteur";
 	protected static $cle = "numEmprunteur";
 	
 	protected $numEmprunteur;
