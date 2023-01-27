@@ -1,0 +1,42 @@
+ body{
+   background-image: url("../vue/images/Fond/fond_connexion.png");
+   font-family: 'Comodo', sans-serif;
+}
+ header{
+   display: grid;
+   flex: auto;
+}
+ form {
+   width: 40%;
+   margin : 20px auto;
+   display: flex;
+   flex-direction: column;
+   border : solid 1px black;
+   border-radius : 4px;
+   box-shadow: 4px 4px 4px grey;
+   padding: 10px;
+   position: fixed;
+   height: 355px;
+   top: 20%;
+   left: 55%;
+   background: white;
+}
+ form h2{
+   font-weight: bold;
+   width: 20%;
+   margin-left: auto;
+   margin-right: auto;
+}
+ form div {
+   display: flex;
+   justify-content: space-between;
+   margin:10px;
+}
+ button {
+   width: 40%;
+   margin: 10px auto;
+   height: 2em;
+}
+ div input {
+   width : 50%;
+}

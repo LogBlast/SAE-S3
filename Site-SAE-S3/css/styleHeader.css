@@ -1,0 +1,43 @@
+header{
+    margin: 0 auto;
+    /* permet de changer l'écart entre le header et le menu */
+    margin-bottom: 160px;
+    width: 100%;
+}
+
+
+.profil{
+	position: absolute;
+	left: 94%;
+	top: 10px;
+	width: 80px;
+	height: auto;
+}
+
+
+
+.logo{
+	position: absolute;
+	left: 42%;
+	top: 10px;
+	width: 15%;
+	height: auto;
+
+}
+
+.iut{
+	position: absolute;
+	right: 78%;
+	top: 10px;
+	width: 21%;
+	height: auto;
+}
+
+.statut{
+	position: absolute;
+    left: 67%;
+    top: 1%;	
+    border-block: blue;
+    border-style: groove;
+    width: 22%;
+}

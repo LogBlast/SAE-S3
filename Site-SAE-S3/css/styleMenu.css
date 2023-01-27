@@ -1,0 +1,46 @@
+﻿* {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+	-moz-transition-property: all;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+}
+
+
+.style-1 {
+	text-align: center;
+  margin-bottom: 40px;
+}
+.btn{
+  color:#999;
+  background:rgba(0, 0, 0);
+  padding:10px 20px;
+  text-decoration:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.btn:hover{
+  border:none;
+  background:rgba(0, 0, 0, 0.4);
+  background:#fff;
+  padding:20px 20px;
+}
+
+.menuProfil {
+position: absolute;
+
+left: 27%;
+display: flex;
+top: 170px;
+left: 27%;
+margin-bottom: 10px;
+margin-top: 10px;
+width: 700px;
+justify-content: center;
+
+
+border-style: inset;
+background: lemonchiffon;
+
+}
